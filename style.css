@@ -220,6 +220,11 @@ body {
 .challenge-item.centered {
     grid-column: 1 / -1;
     text-align: center;
-    max-width: 362px;
+    max-width: 360px;
     margin: 0 auto;
+}
+
+.challenge-item.centered .hint-btn {
+    text-align: left;
+    margin-left: 0;
 }
