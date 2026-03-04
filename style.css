@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #0a0a0a;
+    color: #00cc66;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    border-bottom: 2px solid #00cc66;
+    position: relative;
+    z-index: 10;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #00cc66;
+    box-shadow: 0 0 20px rgba(0, 204, 102, 0.5);
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(0, 204, 102, 0.8);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px rgba(0, 204, 102, 0.8); }
+    to { text-shadow: 0 0 20px rgba(0, 204, 102, 1), 0 0 30px rgba(0, 204, 102, 0.6); }
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+.challenges-list {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .challenges-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .challenges-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.challenge-item {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    border: 1px solid #00cc66;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.challenge-item::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00cc66, #00aa55, #00cc66);
+    border-radius: 8px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.challenge-item:hover::before {
+    opacity: 0.3;
+}
+
+.challenge-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 204, 102, 0.3);
+}
+
+.challenge-header {
+    margin-bottom: 1rem;
+}
+
+.challenge-header h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #00cc66;
+    font-weight: bold;
+}
+
+.challenge-link {
+    color: #00aa55;
+    text-decoration: none;
+    font-size: 0.9rem;
+    word-break: break-all;
+    transition: color 0.3s ease;
+}
+
+.challenge-link:hover {
+    color: #00cc66;
+    text-shadow: 0 0 5px rgba(0, 204, 102, 0.8);
+}
+
+.hint-btn {
+    background: linear-gradient(135deg, #00cc66 0%, #00aa55 100%);
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+.hint-btn:hover {
+    background: linear-gradient(135deg, #00aa55 0%, #00cc66 100%);
+    box-shadow: 0 0 15px rgba(0, 204, 102, 0.5);
+    transform: scale(1.05);
+}
+
+.hint-btn:active {
+    transform: scale(0.98);
+}
+
+.hint-content {
+    background: rgba(0, 204, 102, 0.1);
+    border: 1px solid #00cc66;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.hint-content.show {
+    display: block;
+}
+
+.hint-content p {
+    color: #00cc66;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.matrix-bit {
+    position: absolute;
+    color: #00cc66;
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    pointer-events: none;
+    animation: fall linear infinite;
+    opacity: 1;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.challenge-item.centered {
+    grid-column: 1 / -1;
+    text-align: center;
+    max-width: 362px;
+    margin: 0 auto;
+}

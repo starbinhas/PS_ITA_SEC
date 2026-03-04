@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS ITA_SEC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="matrix-bg" id="matrix-bg"></div>
+    
+    <header class="header">
+        <div class="header-content">
+            <img src="logo.png" alt="PS ITA_SEC Logo" class="logo">
+            <h1 class="title">PS ITA_SEC</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="challenges-list">
+            <div class="challenge-item">
+                <div class="challenge-header">
+                    <h3>Scan Surprise</h3>
+                    <a href="https://play.picoctf.org/practice/challenge/444" target="_blank" class="challenge-link">
+                        https://play.picoctf.org/practice/challenge/444
+                    </a>
+                </div>
+                <button class="hint-btn" onclick="toggleHint(0)">Mostrar Dica</button>
+                <div class="hint-content" id="hint-0">
+                    <p>Todo mundo sabe scanear um qrcode.</p>
+                </div>
+            </div>
+
+            <div class="challenge-item">
+                <div class="challenge-header">
+                    <h3>runme.py</h3>
+                    <a href="https://play.picoctf.org/practice/challenge/250" target="_blank" class="challenge-link">
+                        https://play.picoctf.org/practice/challenge/250
+                    </a>
+                </div>
+                <button class="hint-btn" onclick="toggleHint(1)">Mostrar Dica</button>
+                <div class="hint-content" id="hint-1">
+                    <p>Você tem python? Pra falar a verdade, nem precisa.</p>
+                </div>
+            </div>
+
+            <div class="challenge-item">
+                <div class="challenge-header">
+                    <h3>Inspect HTML</h3>
+                    <a href="https://play.picoctf.org/practice/challenge/275" target="_blank" class="challenge-link">
+                        https://play.picoctf.org/practice/challenge/275
+                    </a>
+                </div>
+                <button class="hint-btn" onclick="toggleHint(2)">Mostrar Dica</button>
+                <div class="hint-content" id="hint-2">
+                    <p>Todo browser tem uma ferramenta 'inspecionar'. Muito útil para tarefas simples.</p>
+                </div>
+            </div>
+
+            <div class="challenge-item">
+                <div class="challenge-header">
+                    <h3>Binary Search</h3>
+                    <a href="https://play.picoctf.org/practice/challenge/442" target="_blank" class="challenge-link">
+                        https://play.picoctf.org/practice/challenge/442
+                    </a>
+                </div>
+                <button class="hint-btn" onclick="toggleHint(3)">Mostrar Dica</button>
+                <div class="hint-content" id="hint-3">
+                    <p>Alguém da ITA_BITS pode te ajudar nessa.</p>
+                </div>
+            </div>
+
+            <div class="challenge-item">
+                <div class="challenge-header">
+                    <h3>Commitment Issues</h3>
+                    <a href="https://play.picoctf.org/practice/challenge/411" target="_blank" class="challenge-link">
+                        https://play.picoctf.org/practice/challenge/411
+                    </a>
+                </div>
+                <button class="hint-btn" onclick="toggleHint(4)">Mostrar Dica</button>
+                <div class="hint-content" id="hint-4">
+                    <p>Git é um software que implementa um sistema de controle de versão no seu projeto. Todo desenvolvedor usa para ter um histórico de alterações. O que é um commit? Como vejo os commits de um projeto?</p>
+                </div>
+            </div>
+
+            <div class="challenge-item">
+                <div class="challenge-header">
+                    <h3>DISKO 1</h3>
+                    <a href="https://play.picoctf.org/practice/challenge/505" target="_blank" class="challenge-link">
+                        https://play.picoctf.org/practice/challenge/505
+                    </a>
+                </div>
+                <button class="hint-btn" onclick="toggleHint(5)">Mostrar Dica</button>
+                <div class="hint-content" id="hint-5">
+                    <p>Arquivos .gz estão compressos. Arquivos .dd contém muitos bytes ilegíveis. O comando strings pode ser útil.</p>
+                </div>
+            </div>
+
+            <div class="challenge-item">
+                <div class="challenge-header">
+                    <h3>GET aHEAD</h3>
+                    <a href="https://play.picoctf.org/practice/challenge/132" target="_blank" class="challenge-link">
+                        https://play.picoctf.org/practice/challenge/132
+                    </a>
+                </div>
+                <button class="hint-btn" onclick="toggleHint(6)">Mostrar Dica</button>
+                <div class="hint-content" id="hint-6">
+                    <p>Entender a aba network do inspecionar pode ser útil. O que são mensagens HTTP? Os métodos GET e POST são os mais comuns. Existem outros? Como enviar uma mensagem HTTP?</p>
+                </div>
+            </div>
+
+            <div class="challenge-item">
+                <div class="challenge-header">
+                    <h3>SQLiLite</h3>
+                    <a href="https://play.picoctf.org/practice/challenge/304" target="_blank" class="challenge-link">
+                        https://play.picoctf.org/practice/challenge/304
+                    </a>
+                </div>
+                <button class="hint-btn" onclick="toggleHint(7)">Mostrar Dica</button>
+                <div class="hint-content" id="hint-7">
+                    <p>O backend costuma integrar um banco de dados e acessá-lo por meio de queries na linguagem SQL para verificar login. No entando, se as queries usam input não sanitizado, há uma vulnerabilidade. Como fazer pra uma SQL querie retornar um login válido? Como comentar código SQL? Outra coisa: desenvolvedores costumam deixar um login com username 'admin' para fins de manutenção.</p>
+                </div>
+            </div>
+
+            <div class="challenge-item">
+                <div class="challenge-header">
+                    <h3>SSTI1</h3>
+                    <a href="https://play.picoctf.org/practice/challenge/492" target="_blank" class="challenge-link">
+                        https://play.picoctf.org/practice/challenge/492
+                    </a>
+                </div>
+                <button class="hint-btn" onclick="toggleHint(8)">Mostrar Dica</button>
+                <div class="hint-content" id="hint-8">
+                    <p>Template engines são ferramentas que geram html dinâmico pelo backend. Mas será que são seguras? Como podemos identificar a template engine que está sendo usada? Existem muitos payloads pela internet.</p>
+                </div>
+            </div>
+
+            <div class="challenge-item centered">
+                <div class="challenge-header">
+                    <h3>EVEN RSA CAN BE BROKEN???</h3>
+                    <a href="https://play.picoctf.org/practice/challenge/470" target="_blank" class="challenge-link">
+                        https://play.picoctf.org/practice/challenge/470
+                    </a>
+                </div>
+                <button class="hint-btn" onclick="toggleHint(9)">Mostrar Dica</button>
+                <div class="hint-content" id="hint-9">
+                    <p>Para quem gosta de Teoria dos Números. RSA é um algoritmo de criptografia amplamente utilizado. Dois números primos são escolhidos e multiplicados p*q = n. Dados são formados por bytes que viram números e são elevados a um expoente módulo n. Pronto! Quem descobre os primos p e q consegue descriptografar matematicamente os dados.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+Todo mundo sabe scanear um qrcode.
+
+Você tem python? Pra falar a verdade, nem precisa.
+
+Todo browser tem uma ferramenta 'inspecionar'. Muito útil para tarefas simples. 
+Binary Search - https://play.picoctf.org/practice/challenge/442
+Alguém da ITA_BITS pode te ajudar nessa.
+
+Git é um software que implementa um sistema de controle de versão no seu projeto. Todo desenvolvedor usa para ter um histórico de alterações. O que é um commit? Como vejo os commits de um projeto?
+
+Arquivos .gz estão compressos. Arquivos .dd contém muitos bytes ilegíveis. O comando strings pode ser útil.
+
+Entender a aba network do inspecionar pode ser útil. O que são mensagens HTTP? Os métodos GET e POST são os mais comuns. Existem outros? Como enviar uma mensagem HTTP?
+
+O backend costuma integrar um banco de dados e acessá-lo por meio de queries na linguagem SQL para verificar login. No entando, se as queries usam input não sanitizado, há uma vulnerabilidade. Como fazer pra uma SQL querie retornar um login válido? Como comentar código SQL? Outra coisa: desenvolvedores costumam deixar um login com username 'admin' para fins de manutenção.
+
+Template engines são ferramentas que geram html dinâmico pelo backend. Mas será que são seguras? Como podemos identificar a template engine que está sendo usada? Existem muitos payloads pela internet.
+
+Para quem gosta de Teoria dos Números. RSA é um algoritmo de criptografia amplamente utilizado. Dois números primos são escolhidos e multiplicados n = p*q. Dados são formados por bytes que viram números e são elevados a um expoente módulo n. Pronto! Quem descobre os primos p e q consegue descriptografar matematicamente os dados.

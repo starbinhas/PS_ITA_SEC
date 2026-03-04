@@ -1,0 +1,19 @@
+Scan Surprise - https://play.picoctf.org/practice/challenge/444
+
+runme.py - https://play.picoctf.org/practice/challenge/250
+
+Inspect HTML - https://play.picoctf.org/practice/challenge/275
+
+Binary Search - https://play.picoctf.org/practice/challenge/442
+
+Commitment Issues - https://play.picoctf.org/practice/challenge/411
+
+DISKO 1 - https://play.picoctf.org/practice/challenge/505
+
+GET aHEAD - https://play.picoctf.org/practice/challenge/132
+
+SQLiLite - https://play.picoctf.org/practice/challenge/304
+
+SSTI1 - https://play.picoctf.org/practice/challenge/492
+
+EVEN RSA CAN BE BROKEN??? - https://play.picoctf.org/practice/challenge/470
